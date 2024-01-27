@@ -1,0 +1,65 @@
+body{
+    background: url('menu_fundo.png');
+    
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+}
+
+a {
+    display: block;
+
+    position: relative; /* Permite posicionar filhos em relação a este elemento. */
+}
+
+.bt_estoq {
+    width: 80px;
+
+    height: 80px;
+
+    position: absolute;
+
+    top: 205px;
+
+    left:80px;
+}
+
+.bt_pvd {
+    width: 80px;
+
+    height: 80px;
+
+    position: absolute;
+
+    top: 605px;
+
+    left: 80px;
+}
+
+.bt_vendas {
+    width: 80px;
+
+    height: 80px;
+
+    position: absolute;
+
+    top: 205px;
+
+    right: 700px;
+}
+
+.bt_nfs {
+    width: 80px;
+
+    height: 80px;
+
+    position: absolute;
+    
+    top: 605px;
+
+    right: 700px; 
+    
+}

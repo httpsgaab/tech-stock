@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400&display=swap');
+
+
+
+body{
+
+    margin: 0%;
+
+    font-family: 'Gabarito' , sans-serif;
+
+    background: url('fundo_da_tela.png'), lightgray 500% / cover no-repeat;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+}
+
+.main-login {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    opacity: 0.9;
+
+    
+}
+
+
+.left-login{
+
+    width: 30%;
+
+    height: 30%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.left-login > h1{
+
+    color: #fff;
+
+} 
+
+.right-login{
+
+    width: 50vw;
+
+    height: 100vw;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;   
+
+}
+
+.card-login{
+
+    width: 500px;
+
+    height: 700px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    padding: 30px 30px;
+
+    background-color: #AFAFAF;
+
+    border-radius: 20px;
+
+    box-shadow: 0px 10px 45px #000000;
+
+    Top: 84px;
+
+    Left:1077px;
+
+}
+
+.card-login > h1{
+
+    color: #fff;
+
+    font-weight: 700;
+
+    margin: 0;
+
+}
+
+.login{
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex-shrink: 0;
+
+    width: 327px;
+
+    height: 77px;
+
+    top: 260px;
+
+    left: 100px;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+
+.textfield{
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    margin: 5px;
+
+}
+
+
+
+.textfield > input{
+
+    width: 400px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 10px;
+
+    color: #5C5C5C;
+
+    background-color: #E2E2E2;
+
+    box-shadow: 0px 2px 5px #5C5C5C;
+
+    font-size: 10pt;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+}
+
+
+
+.textfield > label{
+
+    color: #fff;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.textfield > input::placeholder{
+
+    color: #ffffff79;
+
+}
+
+
+
+.btn-login{
+
+    padding: 16px 20px;
+
+    margin: 25px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background-color:#6F6F6F;
+
+    outline: none;
+
+    text-transform: uppercase;
+
+    font-weight: 800px;
+
+    letter-spacing: 3px;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    box-shadow: 0px 10px 50px #000000;
+
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>TechStock | LOGIN</title>
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login"></div>
+        <div class="right-login">
+            <div class="card-login">
+                <img src="{{ url_for('static', filename='icon.png') }}">
+                <div class="Login">
+                    <center><img src="{{ url_for('static', filename='LOGIN.png') }}"></center>
+                    <form action="/login" method="post">
+                        <div class="textfield">
+                            <label for="usuario">Usuário</label>
+                            <input type="text" name="usuario" placeholder="Usuário">
+                        </div>
+                        <h10>ㅤ</h10>
+                        <div class="textfield">
+                            <label for="senha">Senha</label>
+                            <input type="password" name="senha" placeholder="Senha">
+                        </div>
+                        <h1>ㅤ</h1>
+                        <center>
+                            <button type="submit" class="btn-login">ENTRAR</button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
