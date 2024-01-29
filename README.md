@@ -5,6 +5,6 @@
 
   ° Banco de dados legível e organizado.<p>
   ° Interface leve, minimalista e de fácil entendimento.<p>
-  ° Inteligência artificial integrada para facilitar funções. E também para servir de assistente virtual (continuar...)<br>
+  ° Inteligência artificial integrada para facilitar funções. E também para servir de assistente virtual (continuar...)
   
  
