@@ -3,8 +3,8 @@
 
 Pontos cruciais do projeto:
 
-  ° Banco de dados legível e organizado.
-  ° Interface leve, minimalista e de fácil entendimento.
-  ° Inteligência artificial integrada para facilitar funções. E também para servir de assistente virtual (continuar...)
-  ° 
-  ° 
+  ° Banco de dados legível e organizado.<p>
+  ° Interface leve, minimalista e de fácil entendimento.<p>
+  ° Inteligência artificial integrada para facilitar funções. E também para servir de assistente virtual (continuar...)<br>
+  
+ 
