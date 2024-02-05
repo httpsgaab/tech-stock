@@ -8,7 +8,7 @@
 
 import pandas as pd
 
-estoque = pd.read_excel("estoque.xlsx")
+estoque = pd.read_excel(r"C:\Users\USER\Desktop\sistemy-stk-1\bd-estoque\estoque.xlsx")
 
 item = 'ITEM 1'
 
@@ -17,13 +17,13 @@ filtro = estoque['NOME'] == item
 itens_filtrados = estoque[filtro]
 
 
-display(itens_filtrados)
+print(itens_filtrados)
 
 
 usuarios = pd.read_excel("estoque.xlsx", sheet_name="USUARIOS")
 
 
-display(usuarios)
+print(usuarios)
 
 
 # In[ ]:

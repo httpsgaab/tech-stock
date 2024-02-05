@@ -9,9 +9,12 @@
 <body>
     <h1>ㅤ</h1>
     <div class="bt_estoq">
-        <a href="{{ url_for('static', filename='vendas.png')}}">
+        <a href="/estoque">
             <img src="{{ url_for('static', filename='estoque.png')}}">
+            {{ estoque_html | safe }}
         </a>
+    </div>
+    
     </div>
     <div class="bt_pvd">
         <a href="{{ url_for('static', filename='pvd.png')}}">

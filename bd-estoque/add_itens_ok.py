@@ -11,7 +11,7 @@ import tkinter as tk
 from tkinter import ttk
 
 
-estoque = pd.read_excel("estoque.xlsx", sheet_name="ESTOQUE")
+estoque = pd.read_excel(r"C:\Users\USER\Desktop\sistemy-stk-1\bd-estoque\estoque.xlsx", sheet_name="ESTOQUE")
 
 def adicionar_item():
     global estoque  #global para acessar a variável externa.
