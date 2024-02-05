@@ -10,7 +10,7 @@ app = Flask(__name__)
 allowed_users = ['davi', 'gaab', 'romulo', 'luiz', 'kaua']
 password = '12345678'
 
-@app.route('/ACESSAAI')
+@app.route('/')
 def index():
     return render_template('index.html')
 
@@ -32,7 +32,7 @@ def menu():
 @app.route('/estoque')
 def stk():
     try:
-        estoque = pd.read_excel(r"C:\Users\USER\Desktop\sistemy-stk-1\bd-estoque\estoque.xlsx")
+        estoque = pd.read_excel(r"C:\Users\USER\Desktop\sistemy-stk\bd-estoque\estoque.xlsx")
         # Convertendo os dados do DataFrame para HTML
         estoque_html = estoque.to_html()
     except Exception as e:
