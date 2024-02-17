@@ -32,7 +32,7 @@ def menu():
 @app.route('/estoque')
 def stk():
     try:
-        estoque = pd.read_excel(r"C:\Users\USER\Desktop\sistemy-stk\bd-estoque\estoque.xlsx")
+        estoque = pd.read_excel(r"bd-estoque/estoque.xlsx")
         # Convertendo os dados do DataFrame para HTML
         estoque_html = estoque.to_html()
     except Exception as e:
