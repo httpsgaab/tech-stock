@@ -8,3 +8,4 @@
   ° Inteligência artificial integrada para facilitar funções. E também para servir de assistente virtual (continuar...)
   
  
+# tech-stock
