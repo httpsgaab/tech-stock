@@ -40,5 +40,15 @@ def stk():
 
     return render_template('estoque.html', estoque_html=estoque_html)
 
+@app.route('/notas')
+def nts():
+    try:
+        notas=pd.read_excel(r"notasficais/NotasFiscais.xlsx")
+        notas_html=notas.to_html()
+    except Exception as e:
+        return f"Erro ao executar arquivo {str(e)}"
+        
+    return render_template('notas.html', notas_html=notas_html)
+
 if __name__ == '__main__':
     app.run(debug=True)
