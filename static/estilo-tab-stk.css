@@ -1,0 +1,33 @@
+body{
+background: url('estoque-fundo.png');
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    position: absolute; /* Ou position: fixed; dependendo do comportamento desejado */
+    top: 200px;
+}
+
+table th, table td {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+    color: black;
+}
+
+table th {
+    background-color: #292929;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: white;
+}
+
+.bt-add{
+    width: 100%;
+    border-collapse: collapse ;
+    position: absolute; /* Ou position: fixed; dependendo do comportamento desejado */
+    top: 600px;
+}

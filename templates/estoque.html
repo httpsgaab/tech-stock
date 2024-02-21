@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='estilo-estoque.css') }}">
-    <title>ESTOQUE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo-tab-stk.css') }}">
+    <title>TechStock | ESTOQUE</title>
 </head>
 <body>
     {{ estoque_html | safe }}
-</body>
+        <div class="bt-add">
+            <a href="/add-itm">
+                <img src="{{ url_for('static', filename='add-itm.png')}}">
+    </body>
 </html>

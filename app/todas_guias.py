@@ -12,5 +12,5 @@ guias = pd.read_excel(r"C:\Users\USER\Desktop\sistemy-stk-1\bd-estoque\estoque.x
 
 for sheet_name, df in guias.items():
     print(f"Dados da guia '{sheet_name}':")
-    display(df)
+    print(df)
 

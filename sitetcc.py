@@ -32,7 +32,7 @@ def menu():
 @app.route('/estoque')
 def stk():
     try:
-        estoque = pd.read_excel(r"bd-estoque/estoque.xlsx")
+        estoque = pd.read_excel(r"app/estoque.xlsx")
         # Convertendo os dados do DataFrame para HTML
         estoque_html = estoque.to_html()
     except Exception as e:
@@ -43,12 +43,17 @@ def stk():
 @app.route('/notas')
 def nts():
     try:
-        notas=pd.read_excel(r"app/notas/NotasFiscais.xlsx")
+        notas=pd.read_excel(r"app/notas/nfss.xlsx")
         notas_html=notas.to_html()
     except Exception as e:
         return f"Erro ao executar arquivo {str(e)}"
         
     return render_template('notas.html', notas_html=notas_html)
 
+@app.route('/add-itm')
+
+def add():
+    return render_template('add.html')
+    
 if __name__ == '__main__':
     app.run(debug=True)
