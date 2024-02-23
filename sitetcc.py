@@ -43,7 +43,7 @@ def stk():
 @app.route('/notas')
 def nts():
     try:
-        notas=pd.read_excel(r"app/notas/nfss.xlsx")
+        notas=pd.read_excel(r"notas/nfss.xlsx")
         notas_html=notas.to_html()
     except Exception as e:
         return f"Erro ao executar arquivo {str(e)}"

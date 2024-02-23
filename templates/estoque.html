@@ -8,8 +8,16 @@
 </head>
 <body>
     {{ estoque_html | safe }}
-        <div class="bt-add">
+    
+    <div class="volt">
+        <a href="menu.html">
+            <img src="{{ url_for('static', filename='voltar.png')}}">
+        </a>
+    </div>
+
+        <div class="/add">
             <a href="/add-itm">
                 <img src="{{ url_for('static', filename='add-itm.png')}}">
+    
     </body>
 </html>
