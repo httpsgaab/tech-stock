@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo-api.css') }}">
+    <title>ASSISTENTE</title>
+</head>
+<body>
+    <h1>Chat com ChatGPT</h1>
+    <div id="chat-container"></div>
+    <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+    <button onclick="enviarMensagem()">Enviar</button>
+
+    <script>
+        async function enviarMensagem() {
+            const userInput = document.getElementById('user-input').value;
+            const chatContainer = document.getElementById('chat-container');
+
+            // Exibindo mensagem do usuário no chat
+            const userMessage = document.createElement('p');
+            userMessage.textContent = `User: ${userInput}`;
+            chatContainer.appendChild(userMessage);
+
+            // Enviando mensagem para o servidor Python
+            const resposta = await fetch('/enviar-mensagem', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ mensagem: userInput })
+            }).then(response => response.json());
+
+            // Exibindo resposta do servidor no chat
+            const botMessage = document.createElement('p');
+            botMessage.textContent = `TechStock: ${resposta}`;
+            chatContainer.appendChild(botMessage);
+        }
+    </script>
+</body>
+</html>

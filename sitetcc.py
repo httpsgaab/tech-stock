@@ -95,6 +95,10 @@ def notas():
         return f"Erro ao ler o arquivo Excel: {str(e)}"
 
     return render_template('notas.html', notas_html=notas_html)
+
+@app.route('/api')
+def api():
+    return render_template('assist.html')
     
 if __name__ == '__main__':
     app.run(debug=True)
