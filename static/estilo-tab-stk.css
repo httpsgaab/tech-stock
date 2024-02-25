@@ -6,7 +6,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     position: absolute; /* Ou position: fixed; dependendo do comportamento desejado */
-    top: 200px;
+    top: 220px;
 }
 
 table th, table td {
@@ -29,5 +29,6 @@ table tr:nth-child(even) {
     width: 100%;
     border-collapse: collapse ;
     position: absolute; /* Ou position: fixed; dependendo do comportamento desejado */
-    top: 600px;
+    top: 35px;
+    left: 1750px;
 }

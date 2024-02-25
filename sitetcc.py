@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import pandas as pd
-# estoque = pd.read_excel(r"C:\Users\USER\Desktop\sistemy-stk-1\bd-estoque\estoque.xlsx")
-# print(estoque)
-
+import tkinter as tk
+from tkinter import ttk
 
 app = Flask(__name__)
 
@@ -31,6 +30,7 @@ def menu():
 
 @app.route('/estoque')
 def stk():
+    global estoque
     try:
         estoque = pd.read_excel(r"app/estoque.xlsx")
         # Convertendo os dados do DataFrame para HTML
@@ -40,20 +40,61 @@ def stk():
 
     return render_template('estoque.html', estoque_html=estoque_html)
 
-@app.route('/notas')
-def nts():
-    try:
-        notas=pd.read_excel(r"notas/nfss.xlsx")
-        notas_html=notas.to_html()
-    except Exception as e:
-        return f"Erro ao executar arquivo {str(e)}"
-        
-    return render_template('notas.html', notas_html=notas_html)
-
-@app.route('/add-itm')
-
+@app.route('/add-itm', methods=['GET', 'POST'])
 def add():
-    return render_template('add.html')
+    mensagem = None
+    
+    try:
+        estoque = pd.read_excel("app/estoque.xlsx")  # Atualize o caminho para o arquivo 'estoque.xlsx'
+    except FileNotFoundError:
+        return "Arquivo 'estoque.xlsx' não encontrado."
+
+    if request.method == 'POST':
+        novo_item = {}
+        for coluna in estoque.columns:
+            novo_item[coluna] = request.form[coluna]
+
+        # Criar um novo DataFrame com o novo item
+        novo_df = pd.DataFrame([novo_item], columns=estoque.columns)
+        
+        # Concatenar o DataFrame existente com o novo DataFrame
+        estoque = pd.concat([estoque, novo_df], ignore_index=True)
+        
+        # Salvar o DataFrame atualizado no arquivo Excel
+        estoque.to_excel("app/estoque.xlsx", index=False)  # Atualize o caminho para salvar o arquivo
+        
+        mensagem = "Item adicionado com sucesso!"
+
+    return render_template('add.html', estoque=estoque, mensagem=mensagem)
+
+@app.route('/delete-item', methods=['POST'])
+def delete_item():
+    index = int(request.form['index'])
+    
+    try:
+        estoque = pd.read_excel("app/estoque.xlsx")  # Carregar o DataFrame do arquivo Excel
+    except FileNotFoundError:
+        return "Arquivo 'estoque.xlsx' não encontrado."
+    
+    # Deletar o item pelo índice
+    estoque = estoque.drop(index=index)
+    
+    # Salvar o DataFrame atualizado no arquivo Excel
+    estoque.to_excel("app/estoque.xlsx", index=False)  # Atualize o caminho para salvar o arquivo
+    
+    # Redirecionar de volta para a página de adição com uma mensagem de sucesso
+    return redirect(url_for('add'))
+
+@app.route('/notas')
+def notas():
+    try:
+        notas = pd.read_excel(r"notas/notas.xlsx")
+        # Convertendo os dados do DataFrame para HTML
+        notas_html = notas.to_html()
+    except Exception as e:
+        return f"Erro ao ler o arquivo Excel: {str(e)}"
+
+    return render_template('notas.html', notas_html=notas_html)
     
 if __name__ == '__main__':
     app.run(debug=True)

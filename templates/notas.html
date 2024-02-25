@@ -8,6 +8,11 @@
 </head>
 <body>
     {{ notas_html | safe }}
-
+    
+    <div class="volt">
+        <a href="/menu">
+            <img src="{{ url_for('static', filename='voltar.png')}}">
+        </a>
+    </div>
 </body>
 </html>

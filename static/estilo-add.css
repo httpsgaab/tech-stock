@@ -1,0 +1,89 @@
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão para o corpo do texto */
+    margin: 0; /* Remove a margem padrão do corpo */
+    padding: 0; /* Remove o preenchimento padrão do corpo */
+    background-color: #f2f2f2; /* Define a cor de fundo do corpo */
+}
+
+/* Estilo para os cabeçalhos de nível 1 */
+h1 {
+    color: black; /* Define a cor do texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para o formulário */
+form {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 700px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os rótulos */
+label {
+    display: block; /* Exibe os rótulos em uma linha separada */
+    margin-bottom: 10px; /* Adiciona espaço entre os rótulos */
+}
+
+/* Estilo para os campos de entrada de texto */
+input[type="text"] {
+    width: 80%; /* Define a largura do campo de entrada como 80% do contêiner pai */
+    padding: 10px; /* Adiciona um preenchimento interno ao campo de entrada */
+    margin-bottom: 20px; /* Adiciona espaço entre os campos de entrada */
+    border: 1px solid #ccc; /* Adiciona uma borda sólida com cor cinza */
+    border-radius: 4px; /* Arredonda os cantos do campo de entrada */
+}
+
+/* Estilo para os botões de envio */
+input[type="submit"] {
+    background-color: black; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    padding: 10px 20px; /* Adiciona preenchimento interno ao botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 4px; /* Arredonda os cantos do botão */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    float: right; /* Flutua o botão para a direita */
+    width: 200px;;
+}
+
+/* Estilo para o estado de hover dos botões de envio */
+input[type="submit"]:hover {
+    background-color: rgb(1, 100, 9); /* Define a cor de fundo do botão ao passar o mouse sobre ele */
+}
+
+/* Estilo para as tabelas */
+table {
+
+    margin: 20px auto; /* Centraliza a tabela horizontalmente */
+    border-collapse: collapse; /* Remove a separação entre as células da tabela */
+    background-color: #fff; /* Define a cor de fundo da tabela */
+    border-radius: 8px; /* Arredonda os cantos da tabela */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra à caixa da tabela */
+}
+
+/* Estilo para os cabeçalhos e células das tabelas */
+th, td {
+    padding: 10px; /* Adiciona preenchimento interno às células */
+    border-bottom: 1px solid #ddd; /* Adiciona uma borda inferior às células */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo para os cabeçalhos das tabelas */
+th {
+    background-color: black; /* Define a cor de fundo dos cabeçalhos */
+    color: white; /* Define a cor do texto dos cabeçalhos */
+}
+
+/* Estilo para as linhas pares das tabelas */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Define a cor de fundo das linhas pares */
+}
+
+/* Estilo para o estado de hover das linhas da tabela */
+tr:hover {
+    background-color: #f5f5f5; /* Define a cor de fundo ao passar o mouse sobre as linhas */
+}

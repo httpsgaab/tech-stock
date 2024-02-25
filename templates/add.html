@@ -3,10 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechStock | ADD ITEM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo-add.css') }}">
+    <title>EDITAR ESTOQUE</title>
 </head>
-<html>
-    <body>
-        item adicionado
-    </body>
+<body>
+        <div class="volt">
+        <a href="/estoque">
+            <img src="{{ url_for('static', filename='voltar.png')}}">
+        </a>
+    </div>
+    <h1>EDITAR ESTOQUE</h1>
+    {% if mensagem %}
+    <p>{{ mensagem }}</p>
+    {% endif %}
+    <form method="POST">
+        {% for coluna in estoque.columns %}
+        <label for="{{ coluna }}">{{ coluna }}:</label>
+        <input type="text" id="{{ coluna }}" name="{{ coluna }}" required><br> <!-- Adicionando 'required' -->
+        {% endfor %}
+        <input type="submit" value="Adicionar Item">
+    </form>
+    <h1>ㅤ</h1>
+    <h1>ㅤ</h1>
+    <h1>DELETAR ITENS</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                {% for coluna in estoque.columns %}
+                <th>{{ coluna }}</th>
+                {% endfor %}
+                <th>Deletar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, row in estoque.iterrows() %}
+            <tr>
+                {% for coluna in estoque.columns %}
+                <td>{{ row[coluna] }}</td>
+                {% endfor %}
+                <td>
+                    <form action="/delete-item" method="POST">
+                        <input type="hidden" name="index" value="{{ index }}">
+                        <input type="submit" value="Deletar">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
 </html>
+
